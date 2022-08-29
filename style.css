@@ -1,0 +1,20 @@
+.grid-member {
+    min-width: 16px;
+    min-height: 16px;
+    background-color: lightblue;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    height: 75%;
+    width: 75%;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    gap: 1px;
+    justify-content: center;
+}
