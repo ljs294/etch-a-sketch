@@ -31,10 +31,6 @@ function initGrid(dim) {
     grids.forEach(grid => grid.addEventListener('mouseout', function (e) {
         e.target.className = 'grid';
     }));
-
-    grid.forEach(grid => grid.addEventListener('click', function(e) {
-        e.target.className = 'clicked';
-    }));
 };
 
 
@@ -56,3 +52,9 @@ gridSize.addEventListener('click', function (e) {
     dim = prompt('How many squares per side?');
     newGrid(dim);
 });
+
+// Implementation of a pen on click in progress below
+const grid = document.querySelectorAll('.grid');
+grid.forEach(grid => grid.addEventListener('click', function(e) {
+    e.target.className = 'clicked';
+}));
