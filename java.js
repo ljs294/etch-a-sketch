@@ -18,8 +18,8 @@ function initGrid(dim) {
 
     const grid = document.querySelectorAll('.grid');
     console.log(grid);
-    grid.forEach(grid => grid.style.width = `${960/dim}px`);
-    grid.forEach(grid => grid.style.height = `${960/dim}px`);
+    grid.forEach(grid => grid.style.width = `${960 / dim}px`);
+    grid.forEach(grid => grid.style.height = `${960 / dim}px`);
 
     // Highlighting cell hovering above
 
@@ -53,8 +53,17 @@ gridSize.addEventListener('click', function (e) {
     newGrid(dim);
 });
 
-// Implementation of a pen on click in progress below
-const grid = document.querySelectorAll('.grid');
-grid.forEach(grid => grid.addEventListener('click', function(e) {
-    e.target.className = 'clicked';
-}));
+// Draw mode button
+const pen = document.querySelector('#drawMode');
+pen.addEventListener('click', function (e) {
+    console.log(e.target);
+    draw('black');
+});
+
+function draw(color) {
+    const grid = document.querySelectorAll('.grid');
+    grid.forEach(grid => grid.addEventListener('click' && 'mouseover', function (e) {
+        console.log(e.target);
+        e.target.style.backgroundColor = `black`;
+    }));
+};
