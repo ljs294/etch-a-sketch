@@ -1,6 +1,4 @@
-.grid-member {
-    min-width: 16px;
-    min-height: 16px;
+.grid {
     background-color: lightblue;
 }
 
@@ -8,8 +6,8 @@
     display: flex;
     flex-direction: column;
     gap: 1px;
-    height: 75%;
-    width: 75%;
+    height: 960px;
+    width: 960px;
     align-items: center;
 }
 
@@ -17,4 +15,13 @@
     display: flex;
     gap: 1px;
     justify-content: center;
+}
+
+.hover {
+    background-color: lightgrey;
+    scale: 1.3;
+}
+
+.clicked {
+    background-color: black;
 }
