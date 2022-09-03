@@ -50,6 +50,10 @@ console.log(gridSize);
 gridSize.addEventListener('click', function (e) {
     console.log(e.target);
     dim = prompt('How many squares per side?');
+    while (dim > 256) {
+        alert('Max size is 256!');
+        dim = prompt('How many squares per side?');
+    }
     newGrid(dim);
 });
 
